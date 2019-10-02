@@ -1,5 +1,11 @@
 # Visual Studio 2015 user specific files
 .vs/
+Intermediate
+DerivedDataCache
+Saved/
+TEA/TEA.sln
+TEA/Build/
+TEA/Binaries/
 
 # Compiled Object files
 *.slo
