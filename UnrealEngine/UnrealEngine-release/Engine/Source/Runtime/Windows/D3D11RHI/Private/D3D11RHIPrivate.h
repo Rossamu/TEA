@@ -46,7 +46,8 @@ extern bool GDX11NVAfterMathEnabled;
 THIRD_PARTY_INCLUDES_START
 __pragma(warning(disable: 4263))
 __pragma(warning(disable: 4264))
-#include "metrics_discovery_helper_dx11.h"
+#include "../../../../../Source//ThirdParty/IntelMetricsDiscovery/MetricsDiscoveryHelper/source/metrics_discovery_helper_dx11.h"
+//#include "metrics_discovery_helper_dx11.h"
 THIRD_PARTY_INCLUDES_END
 
 extern bool GDX11IntelMetricsDiscoveryEnabled;
