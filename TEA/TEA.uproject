@@ -1,13 +1,16 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{75971C9C-491A-93FC-7E3F-59A740C11A63}",
+	"EngineAssociation": "{35853D28-4404-3E88-A1DF-EB890BFAF130}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "TEA",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	]
 }
