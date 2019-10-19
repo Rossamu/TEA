@@ -14,4 +14,18 @@ class ACPP_GameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+
+	void SetSubLevelName(const char* p)
+	{
+		SubLevelName = p;
+	}
+
+protected:
+
+	virtual void Initialize() {};
+	virtual void OnGoNext() {};
+
+	FString SubLevelName;
+
 };
