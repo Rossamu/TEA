@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+//#include "../CPP_GameModeManager.h"
 #include "CPP_GameModeBase.generated.h"
 
 /**
@@ -16,6 +17,9 @@ class ACPP_GameModeBase : public AGameModeBase
 	
 public:
 
+	ACPP_GameModeBase();
+	~ACPP_GameModeBase();
+
 	void SetSubLevelName(const char* p)
 	{
 		SubLevelName = p;
@@ -27,5 +31,8 @@ protected:
 	virtual void OnGoNext() {};
 
 	FString SubLevelName;
+
+//	UPROPERTY()
+//		UCPP_GameModeManager* ModeManager;
 
 };
