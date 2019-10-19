@@ -2,10 +2,13 @@
 
 #include "Kismet/GameplayStatics.h"
 //#include "../Common/FJsonBase.h"
+#include "Base/CPP_GameModeBase.h"
 
 #include "CPP_GameModeManager.h"
 
+
 UCPP_GameModeManager::UCPP_GameModeManager(const FObjectInitializer& ObjectInitializer)
+//	:Super(ObjectInitializer)
 	:Modes()
 {
 }
@@ -47,10 +50,10 @@ void UCPP_GameModeManager::Initialize(TSubclassOf<ACPP_GameModeBase> ModeClass, 
 }
 
 void UCPP_GameModeManager::SetInitGameMode(TSubclassOf<ACPP_GameModeBase> ModeClass, const FString& LevelName)
- {
+{
 	// TODO : Load Stream Level 
 	 //FLatentActionInfo Info;
 	 //UGameplayStatics::LoadStreamLevel(GetWorld(), FName(*LevelName), false, true, Info);
 
-	 
- }
+}
+

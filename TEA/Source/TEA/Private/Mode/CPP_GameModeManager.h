@@ -2,11 +2,10 @@
 
 #pragma once
 
-#include "Base/CPP_GameModeBase.h"
-
 #include "UObject/NoExportTypes.h"
 #include "CPP_GameModeManager.generated.h"
 
+class ACPP_GameModeBase;
 /**
  * 
  */
@@ -27,7 +26,7 @@ public:
 	T* NewMode(const char *SubLevelName = nullptr) { return Cast<T>(NewMode(T::StaticClass(), SubLevelName)); }
 
 	FString SubLevelName;
-
+	
 	static void SetInitGameMode(TSubclassOf<ACPP_GameModeBase> ModeClass, const FString& LevelName);
 
 	
@@ -39,4 +38,5 @@ private:
 		TArray<ACPP_GameModeBase*> Modes;
 
 	FString InitLevelName;
+	
 };
