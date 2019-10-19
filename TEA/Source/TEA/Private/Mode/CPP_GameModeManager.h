@@ -28,12 +28,12 @@ public:
 
 	FString SubLevelName;
 
+	static void SetInitGameMode(TSubclassOf<ACPP_GameModeBase> ModeClass, const FString& LevelName);
 
 	
 private:
 	
 	void Initialize(TSubclassOf<ACPP_GameModeBase>ModeClass, const FString& LevelName = TEXT(""), const FString& = TEXT(""));
-	void SetInitGameMode(TSubclassOf<ACPP_GameModeBase> ModeClass, const FString& LevelName);
 
 	UPROPERTY()
 		TArray<ACPP_GameModeBase*> Modes;

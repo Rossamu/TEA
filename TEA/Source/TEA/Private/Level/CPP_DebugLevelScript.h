@@ -13,5 +13,7 @@ UCLASS()
 class ACPP_DebugLevelScript : public ALevelScriptActor
 {
 	GENERATED_BODY()
-	
+
+public:
+	void BeginPlay() override;
 };
