@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
-#include "TeaGameMode.generated.h"
+#include "UObject/NoExportTypes.h"
+#include "CPP_GameModeManager.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class TEA_API ATeaGameMode : public AGameModeBase
+class UCPP_GameModeManager : public UObject
 {
 	GENERATED_BODY()
 	
