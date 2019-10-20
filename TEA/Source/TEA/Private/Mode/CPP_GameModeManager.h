@@ -38,5 +38,6 @@ private:
 		TArray<ACPP_GameModeBase*> Modes;
 
 	FString InitLevelName;
-	
+
+	static TWeakObjectPtr<UCPP_GameModeManager> s_pInst;
 };

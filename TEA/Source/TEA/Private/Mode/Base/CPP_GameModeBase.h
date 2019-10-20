@@ -14,6 +14,8 @@ UCLASS()
 class ACPP_GameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+	friend class UCPP_GameModeManager;
 	
 public:
 
