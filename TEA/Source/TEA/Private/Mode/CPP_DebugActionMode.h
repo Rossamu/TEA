@@ -16,6 +16,8 @@ class ACPP_DebugActionMode : public ACPP_GameModeBase
 
 public:
 
+	ACPP_DebugActionMode();
+
 	virtual void Tick(float DeltaTime)override;
 
 protected:

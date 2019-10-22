@@ -3,6 +3,12 @@
 
 #include "CPP_DebugActionMode.h"
 
+ACPP_DebugActionMode::ACPP_DebugActionMode()
+	:Super()
+{
+
+}
+
 void ACPP_DebugActionMode::Initialize()
 {
 	// FGameLogicPlayerParameter = FDebugConfiguration::Instance().Player;
