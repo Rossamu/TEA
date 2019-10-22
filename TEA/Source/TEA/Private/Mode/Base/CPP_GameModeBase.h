@@ -19,8 +19,7 @@ class ACPP_GameModeBase : public AGameModeBase
 	
 public:
 
-	ACPP_GameModeBase() {};
-	ACPP_GameModeBase(const FObjectInitializer& ObjectInitializer);
+	ACPP_GameModeBase();
 	~ACPP_GameModeBase();
 
 	void SetSubLevelName(const char* p)

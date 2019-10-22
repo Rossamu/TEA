@@ -15,8 +15,13 @@ class ACPP_DebugActionMode : public ACPP_GameModeBase
 	GENERATED_BODY()
 
 public:
+
 	virtual void Tick(float DeltaTime)override;
 
 protected:
+
 	virtual void Initialize() override;
+
+
+
 };

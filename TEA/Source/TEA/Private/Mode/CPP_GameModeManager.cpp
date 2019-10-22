@@ -5,11 +5,11 @@
 //#include "../Common/FJsonBase.h"
 #include "Base/CPP_GameModeBase.h"
 
+ TWeakObjectPtr<UCPP_GameModeManager> s_pInst;
 
-
-UCPP_GameModeManager::UCPP_GameModeManager(const FObjectInitializer& ObjectInitializer)
-//	:Super(ObjectInitializer)
-	:Modes()
+UCPP_GameModeManager::UCPP_GameModeManager()
+	:Super()
+	,Modes()
 {
 	if (GetWorld())
 	{
@@ -58,8 +58,6 @@ void UCPP_GameModeManager::Initialize(TSubclassOf<ACPP_GameModeBase> ModeClass, 
 	ACPP_GameModeBase* Mode = NewMode(ModeClass, TCHAR_TO_ANSI(*LevelName));
 }
 
-
- TWeakObjectPtr<UCPP_GameModeManager> UCPP_GameModeManager::s_pInst;
  void UCPP_GameModeManager::SetInitGameMode(TSubclassOf<ACPP_GameModeBase> ModeClass, const FString& LevelName)
  {
 	 // TODO : Load Stream Level 

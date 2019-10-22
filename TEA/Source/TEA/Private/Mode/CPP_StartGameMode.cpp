@@ -3,8 +3,8 @@
 
 #include "CPP_StartGameMode.h"
 
-ACPP_StartGameMode::ACPP_StartGameMode(const FObjectInitializer& ObjectInitializer)
-	:Super(ObjectInitializer)
+ACPP_StartGameMode::ACPP_StartGameMode()
+	:Super()
 {
 	ModeManager = CreateDefaultSubobject<UCPP_GameModeManager>(TEXT("ModeManager"));
 }

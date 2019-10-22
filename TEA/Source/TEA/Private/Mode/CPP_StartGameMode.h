@@ -18,8 +18,7 @@ class ACPP_StartGameMode : public ACPP_GameModeBase
 
 public:
 
-	ACPP_StartGameMode() {}
-	ACPP_StartGameMode(const FObjectInitializer& ObjectInitializer);
+	ACPP_StartGameMode();
 	~ACPP_StartGameMode() {}
 
 	virtual void Tick(float DeltaTime)override;

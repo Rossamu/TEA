@@ -5,6 +5,10 @@
 
 void ACPP_DebugActionMode::Initialize()
 {
+	// FGameLogicPlayerParameter = FDebugConfiguration::Instance().Player;
+
+	// TODO : Create spawn class for player and configuration
+
 
 }
 

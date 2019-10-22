@@ -3,8 +3,8 @@
 
 #include "CPP_GameModeBase.h"
 
-ACPP_GameModeBase::ACPP_GameModeBase(const FObjectInitializer& ObjectInitializer)
-	:Super(ObjectInitializer)
+ACPP_GameModeBase::ACPP_GameModeBase()
+	:Super()
 	,ModeManager(nullptr)
 {
 }

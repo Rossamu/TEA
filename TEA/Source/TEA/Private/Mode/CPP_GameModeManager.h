@@ -16,7 +16,7 @@ class UCPP_GameModeManager : public UObject
 
 public:
 
-	UCPP_GameModeManager(const FObjectInitializer& ObjectInitializer);
+	UCPP_GameModeManager();
 	~UCPP_GameModeManager();
 
 
@@ -38,6 +38,4 @@ private:
 		TArray<ACPP_GameModeBase*> Modes;
 
 	FString InitLevelName;
-
-	static TWeakObjectPtr<UCPP_GameModeManager> s_pInst;
 };
