@@ -1,0 +1,3 @@
+[submodule "TEA/Content"]
+	path = TEA/Content
+	url = https://gitlab.com/tea-game/content.git
