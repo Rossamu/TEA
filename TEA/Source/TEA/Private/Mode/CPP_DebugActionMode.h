@@ -24,6 +24,8 @@ protected:
 
 	virtual void Initialize() override;
 
+	TSubclassOf<AActor> Enemy;
+
 
 
 };

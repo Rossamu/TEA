@@ -3,6 +3,8 @@
 
 #include "CPP_DebugActionMode.h"
 
+#include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
+
 ACPP_DebugActionMode::ACPP_DebugActionMode()
 	:Super()
 {
@@ -15,6 +17,14 @@ void ACPP_DebugActionMode::Initialize()
 
 	// TODO : Create spawn class for player and configuration
 
+	FString Path = "/Game/ThirdPersonBP/Blueprints/ThirdPersonCharacter.ThirdPersonCharacter_c";
+	ConstructorHelpers::FObjectFinder<UClass> CharacterBP(*Path);
+	TSubclassOf<AActor> ThirdPersonCharacter = CharacterBP.Object;
+
+	if (ThirdPersonCharacter != nullptr)
+	{
+		Enemy = ThirdPersonCharacter;
+	}
 
 }
 
