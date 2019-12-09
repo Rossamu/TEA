@@ -8,5 +8,4 @@
 void ACPP_DebugLevelScript::BeginPlay()
 {
 	UCPP_GameModeManager::SetInitGameMode(ACPP_DebugActionMode::StaticClass(), TEXT(""));
-
 }

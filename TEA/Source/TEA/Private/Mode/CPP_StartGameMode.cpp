@@ -10,8 +10,8 @@ ACPP_StartGameMode::ACPP_StartGameMode()
 {
 	ModeManager = CreateDefaultSubobject<UCPP_GameModeManager>(TEXT("ModeManager"));
 
-	FString CharacterPath = "/Game/ThirdPersonBP/Blueprints/ThirdPersonCharacter.ThirdPersonCharacter_c";
-	static ConstructorHelpers::FObjectFinder<UClass> CharacterBP(*CharacterPath);
+	FString Path = "/Game/ThirdPersonBP/Blueprints/ThirdPersonCharacter.ThirdPersonCharacter_c";
+	ConstructorHelpers::FObjectFinder<UClass> CharacterBP(*Path);
 	TSubclassOf<AActor> ThirdPersonCharacter = CharacterBP.Object;
 
 	if (ThirdPersonCharacter != nullptr)

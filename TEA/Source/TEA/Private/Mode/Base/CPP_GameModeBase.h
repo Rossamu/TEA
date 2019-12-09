@@ -30,9 +30,6 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY()
-		AActor* test;
-
 protected:
 
 	virtual void Initialize() {};
