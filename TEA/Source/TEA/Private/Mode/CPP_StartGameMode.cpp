@@ -1,7 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include"CPP_DebugActionMode.h"
 
 #include "CPP_StartGameMode.h"
+
 
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 
@@ -9,9 +11,10 @@ ACPP_StartGameMode::ACPP_StartGameMode()
 	:Super()
 {
 	ModeManager = CreateDefaultSubobject<UCPP_GameModeManager>(TEXT("ModeManager"));
+	ModeManager->NewMode(ACPP_DebugActionMode::StaticClass(), "DebugActionMode");
 
-	FString Path = "/Game/ThirdPersonBP/Blueprints/ThirdPersonCharacter.ThirdPersonCharacter_c";
-	ConstructorHelpers::FObjectFinder<UClass> CharacterBP(*Path);
+	FString CharacterPath = "/Game/Developers/mio/Contents/ParagonShinbi/Characters/Heroes/Shinbi/ShinbiPlayerCharacter.ShinbiPlayerCharacter_c";
+	static ConstructorHelpers::FObjectFinder<UClass> CharacterBP(*CharacterPath);
 	TSubclassOf<AActor> ThirdPersonCharacter = CharacterBP.Object;
 
 	if (ThirdPersonCharacter != nullptr)

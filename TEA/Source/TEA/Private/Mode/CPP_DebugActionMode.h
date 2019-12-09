@@ -24,6 +24,7 @@ protected:
 
 	virtual void Initialize() override;
 
-
+private:
+	FString EnemyCharacterPath;
 
 };

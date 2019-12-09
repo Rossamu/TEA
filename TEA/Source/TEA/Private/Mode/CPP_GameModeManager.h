@@ -25,8 +25,6 @@ public:
 	template<class T>
 	T* NewMode(const char *SubLevelName = nullptr) { return Cast<T>(NewMode(T::StaticClass(), SubLevelName)); }
 
-	FString SubLevelName;
-	
 	static void SetInitGameMode(TSubclassOf<ACPP_GameModeBase> ModeClass, const FString& LevelName);
 
 	
