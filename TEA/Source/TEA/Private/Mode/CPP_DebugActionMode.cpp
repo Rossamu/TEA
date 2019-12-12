@@ -4,6 +4,7 @@
 #include "CPP_DebugActionMode.h"
 
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
+#include "Engine/StreamableManager.h"
 #include"Characters/Base/CPP_CharacterBase.h"
 
 ACPP_DebugActionMode::ACPP_DebugActionMode()
@@ -11,7 +12,7 @@ ACPP_DebugActionMode::ACPP_DebugActionMode()
 {
 	EnemyCharacterPath = "/Game/Developers/mio/Contents/MyEnemy/Enemy_Meca.Enemy_Meca_c";
 	static ConstructorHelpers::FObjectFinder<UClass> EnemyCharacterBP(*EnemyCharacterPath);
-	TSubclassOf<UClass> EnemyCharacter = EnemyCharacterBP.Object;
+	EnemyCharacter = EnemyCharacterBP.Object;
 
 }
 
@@ -29,4 +30,16 @@ void ACPP_DebugActionMode::Initialize()
 void ACPP_DebugActionMode::Tick(float DeltaTime)
 {
 
+}
+
+UCPP_CharacterBase* ACPP_DebugActionMode::GetEnemyCharacter()
+{
+	if (EnemyCharacter.IsPending())
+	{
+		const FSoftObjectPath& AssetRef = EnemyCharacter.ToStringReference();
+		//EnemyCharacter = Cast<UCPP_CharacterBase>(Streamble)
+	}
+
+
+	return nullptr;
 }

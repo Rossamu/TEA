@@ -6,6 +6,8 @@
 #include "Base/CPP_GameModeBase.h"
 #include "CPP_DebugActionMode.generated.h"
 
+class UCPP_CharacterBase;
+
 /**
  * 
  */
@@ -20,6 +22,8 @@ public:
 
 	virtual void Tick(float DeltaTime)override;
 
+	UCPP_CharacterBase* GetEnemyCharacter();
+
 protected:
 
 	virtual void Initialize() override;
@@ -27,4 +31,5 @@ protected:
 private:
 	FString EnemyCharacterPath;
 
+	TSoftObjectPtr<UCPP_CharacterBase> EnemyCharacter;
 };
