@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "Characters/Base/CPP_CharacterBase.h"
 #include "CPP_PlayerCharacter.generated.h"
 
@@ -18,12 +17,13 @@ private:
 
 	static const int32 MaxJumpCount = 2;
 
+	// Called to bind functionality to input
 	virtual void  SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+
+	 // Called upon landing when falling, to perform actions based on the Hit result. 
 	virtual void Landed(const FHitResult& Hit) override;
 
 	void Jump();
-	//void StopJumping();
 
 	int32 JumpCount = 0;
-
 };
