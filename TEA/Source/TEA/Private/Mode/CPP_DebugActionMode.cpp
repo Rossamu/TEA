@@ -6,6 +6,7 @@
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 #include "Engine/StreamableManager.h"
 #include"Characters/Base/CPP_CharacterBase.h"
+#include "Engine/World.h"
 
 ACPP_DebugActionMode::ACPP_DebugActionMode()
 	:Super()
@@ -19,7 +20,13 @@ ACPP_DebugActionMode::ACPP_DebugActionMode()
 void ACPP_DebugActionMode::Initialize()
 {
 
-
+//	FString path = "/Game/test.test_C"; // /Content 以下のパスが /Game 以下のパスに置き換わり、コンテントブラウザーで名前が test なら test.test_C を指定する。
+//	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // 上記で設定したパスに該当するクラスを取得
+// if (sc != nullptr)
+	{
+//		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // スポーン処理
+//		a->SetActorLocation(FVector(600, 1424.302734, 131.790405)); // 確認しやすいように座標を設定
+	}
 	// FGameLogicPlayerParameter = FDebugConfiguration::Instance().Player;
 
 	// TODO : Create spawn class for player and configuration
