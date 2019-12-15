@@ -23,7 +23,6 @@ ACPP_StartGameMode::ACPP_StartGameMode()
 		DefaultPawnClass = ThirdPersonCharacter;
 	}
 
-	EnemyCharacterPath = "/Game/Developers/mio/Contents/MyEnemy/Enemy_Meca.Enemy_Meca_c";
 }
 
 void ACPP_StartGameMode::Tick(float DeltaTime)
@@ -35,16 +34,16 @@ void ACPP_StartGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
+	EnemyCharacterPath = "/Game/Developers/mio/Contents/MyEnemy/Enemy_Meca.Enemy_Meca_c";
 	FVector EnemyPosition = FVector(100, 1424.302734, 91.790405);
 
-/*	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // 上記で設定したパスに該当するクラスを取得
-	if (sc)
+	TSubclassOf<class AActor> EnemyCharacterBP = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); 
+	if (EnemyCharacterBP)
 	{
-		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // スポーン処理
-		a->SetActorLocation(EnemyPosition); // 確認しやすいように座標を設定
-	}*/
+		AActor* EnemyCharacter = GetWorld()->SpawnActor<AActor>(EnemyCharacterBP, EnemyPosition, FRotator::ZeroRotator);
+	}
 
-	UClass* EnemyCharacterBP = LoadObject<UClass>(this, TEXT("Class'/Game/Developers/mio/Contents/MyEnemy/Enemy_Meca.Enemy_Meca_c'"));
+/*	UClass* EnemyCharacterBP = LoadObject<UClass>(this, TEXT("Class'/Game/Developers/mio/Contents/MyEnemy/Enemy_Meca.Enemy_Meca_c'"));
 	if (EnemyCharacterBP)
 	{
 		AActor* EnemyCharacter = GetWorld()->SpawnActor<AActor>(EnemyCharacterBP, EnemyPosition, FRotator::ZeroRotator);
@@ -53,4 +52,5 @@ void ACPP_StartGameMode::BeginPlay()
 			EnemyCharacter->SetActorLocation(EnemyPosition);
 		}
 	}
+*/
 }
