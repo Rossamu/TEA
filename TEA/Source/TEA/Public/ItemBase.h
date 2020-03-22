@@ -2,24 +2,30 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "UObject/Interface.h"
+#include "Engine.h"
 #include "ItemBase.generated.h"
-
-// This class does not need to be modified.
-UINTERFACE(MinimalAPI)
-class UItemBase : public UInterface
-{
-	GENERATED_BODY()
-};
 
 /**
  * 
  */
-class TEA_API IItemBase
+USTRUCT(BlueprintType) //‚¨‚Ü‚¶‚È‚¢
+struct FItemBase
 {
-	GENERATED_BODY()
+	//‚¨‚Ü‚¶‚È‚¢2
+	GENERATED_USTRUCT_BODY();
 
-	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+
+	//Variabls
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+		FString Name;
+
+	//The type "FIcon" will be defined in the future.
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+		//FIcon Icon;
+
+
+	//Functions
+	FItemBase();
+	~FItemBase();
 };

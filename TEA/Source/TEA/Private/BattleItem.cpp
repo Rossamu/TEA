@@ -1,12 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "../Public/ItemBase.h"
+#include "../Public/BattleItem.h"
 
-FItemBase::FItemBase()
+FBattleItem::FBattleItem()
 {
 }
 
-FItemBase::~FItemBase()
+FBattleItem::~FBattleItem()
 {
 }

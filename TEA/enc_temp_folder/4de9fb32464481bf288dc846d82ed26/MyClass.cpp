@@ -1,12 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "../Public/ItemBase.h"
+#include "MyClass.h"
 
-FItemBase::FItemBase()
+MyClass::MyClass()
 {
 }
 
-FItemBase::~FItemBase()
+MyClass::~MyClass()
 {
 }
