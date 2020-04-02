@@ -3,10 +3,11 @@
 
 #include "../Public/ItemBase.h"
 
-FItemBase::FItemBase()
+/*FItemBase::FItemBase()
 {
 }
 
 FItemBase::~FItemBase()
 {
 }
+*/
