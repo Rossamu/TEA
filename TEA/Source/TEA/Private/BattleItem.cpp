@@ -1,13 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-/*
 #include "../Public/BattleItem.h"
 
-FBattleItem::FBattleItem()
-{
+FStatus UCPP_BattleItemBase::Use_Implementation(FStatus UserStatus) {
+	return UserStatus;
 }
-
-FBattleItem::~FBattleItem()
-{
-}
-*/

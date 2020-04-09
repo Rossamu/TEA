@@ -34,8 +34,8 @@ public:
 
 
 	//Functions
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-		FStatus Use(FStatus UserStatus);
+	UFUNCTION(BlueprintCallable)
+		void TestFunc(FStatus UserStatus) {};
 
 	UCPP_BattleItemBase() {};
 	~UCPP_BattleItemBase() {};
