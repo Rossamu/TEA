@@ -16,11 +16,18 @@ class TEA_API UCPP_ItemBase : public UObject
 
 public:
 
+	//const
+
+	UPROPERTY(BlueprintReadOnly, Category = "Item")
+		FString PathToIconFilesDirectory;
 
 	//Variabls
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 		FString Name;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+		FString IconImageName;
+	
 
 	//The type "FIcon" will be defined in the future.
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
@@ -28,6 +35,8 @@ public:
 
 
 	//Functions
-	UCPP_ItemBase() {};
+	UCPP_ItemBase() {
+		PathToIconFilesDirectory = "/Game/Developers/KoichiYatsuduka/Items/Icons/";
+	};
 	~UCPP_ItemBase() {};
 };
