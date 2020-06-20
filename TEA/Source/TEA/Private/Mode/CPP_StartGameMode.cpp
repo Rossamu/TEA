@@ -14,7 +14,7 @@ ACPP_StartGameMode::ACPP_StartGameMode()
 	ModeManager = CreateDefaultSubobject<UCPP_GameModeManager>(TEXT("ModeManager"));
 	ModeManager->NewMode(ACPP_DebugActionMode::StaticClass(), "DebugActionMode");
 
-	FString CharacterPath = "/Game/Developers/mio/Contents/ParagonShinbi/Characters/Heroes/Shinbi/ShinbiPlayerCharacter.ShinbiPlayerCharacter_c";
+	FString CharacterPath = "/Game/Characters/Mercedes/Mercedes.Mercedes_c";
 	static ConstructorHelpers::FObjectFinder<UClass> CharacterBP(*CharacterPath);
 	TSubclassOf<AActor> ThirdPersonCharacter = CharacterBP.Object;
 
@@ -37,11 +37,11 @@ void ACPP_StartGameMode::BeginPlay()
 
 	FVector EnemyPosition = FVector(100, 1424.302734, 91.790405);
 
-/*	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // ã‹L‚Åİ’è‚µ‚½ƒpƒX‚ÉŠY“–‚·‚éƒNƒ‰ƒX‚ğæ“¾
+/*	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // ï¿½ï¿½Lï¿½Åİ’è‚µï¿½ï¿½ï¿½pï¿½Xï¿½ÉŠYï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½æ“¾
 	if (sc)
 	{
-		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // ƒXƒ|[ƒ“ˆ—
-		a->SetActorLocation(EnemyPosition); // Šm”F‚µ‚â‚·‚¢‚æ‚¤‚ÉÀ•W‚ğİ’è
+		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // ï¿½Xï¿½|ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		a->SetActorLocation(EnemyPosition); // ï¿½mï¿½Fï¿½ï¿½ï¿½â‚·ï¿½ï¿½ï¿½æ‚¤ï¿½Éï¿½ï¿½Wï¿½ï¿½İ’ï¿½
 	}*/
 
 	UClass* EnemyCharacterBP = LoadObject<UClass>(this, TEXT("Class'/Game/Developers/mio/Contents/MyEnemy/Enemy_Meca.Enemy_Meca_c'"));
