@@ -6,6 +6,16 @@
 #include "GameFramework/Character.h"
 #include "CPP_CharacterBase.generated.h"
 
+UENUM(BlueprintType)
+enum class EActionType : uint8
+{
+	NormalAttack		,
+	SpecialAttack		,
+	MagicAttack			,
+	Dodge				,
+	None
+};
+
 UCLASS()
 class ACPP_CharacterBase : public ACharacter
 {
