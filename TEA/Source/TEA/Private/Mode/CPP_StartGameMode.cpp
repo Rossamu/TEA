@@ -14,7 +14,7 @@ ACPP_StartGameMode::ACPP_StartGameMode()
 	ModeManager = CreateDefaultSubobject<UCPP_GameModeManager>(TEXT("ModeManager"));
 	ModeManager->NewMode(ACPP_DebugActionMode::StaticClass(), "DebugActionMode");
 
-	FString CharacterPath = "/Game/Characters/Mercedes/Mercedes.Mercedes_c";
+	FString CharacterPath = "/Game/Characters/Mercedes/Blueprints/Mercedes.Mercedes_c";
 	static ConstructorHelpers::FObjectFinder<UClass> CharacterBP(*CharacterPath);
 	TSubclassOf<AActor> ThirdPersonCharacter = CharacterBP.Object;
 
