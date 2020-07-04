@@ -12,7 +12,18 @@ enum class EActionType : uint8
 	NormalAttack		,
 	SpecialAttack		,
 	MagicAttack			,
-	Dodge				,
+	Dodge				UMETA(DisplayName = Roll),
+	Step				,
+	None
+};
+
+UENUM(BlueprintType)
+enum class EStepDirection : uint8
+{
+	Front,
+	Back,
+	Left,
+	Right,
 	None
 };
 
