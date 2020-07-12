@@ -4,9 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "../../../Public/Enum_ActionType.h"
+#include "../../../Public/CPP_Sword.h"
+#include "../../../Public/CPP_ArtificialLegs.h"
+#include "../../../Public/CPP_ArtificialArm.h"
+
 #include "CPP_CharacterBase.generated.h"
 
-UENUM(BlueprintType)
+/*UENUM(BlueprintType)
 enum class EActionType : uint8
 {
 	NormalAttack		,
@@ -15,7 +20,7 @@ enum class EActionType : uint8
 	Dodge				UMETA(DisplayName = Roll),
 	Step				,
 	None
-};
+};*/
 
 UENUM(BlueprintType)
 enum class EStepDirection : uint8
@@ -25,6 +30,23 @@ enum class EStepDirection : uint8
 	Left,
 	Right,
 	None
+};
+
+USTRUCT(BlueprintType, Blueprintable) //‚¨‚Ü‚¶‚È‚¢
+struct FEquipments
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCPP_Sword* Sword;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCPP_ArtificialArm* ArtificialArm;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCPP_ArtificialLegs* ArtificialLegs;
+
+
 };
 
 UCLASS()
