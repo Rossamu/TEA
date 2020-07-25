@@ -1,15 +1,18 @@
 #pragma once
 
+#include "Structs.h"
 #include "Engine.h"
+#include "CoreMinimal.h"
+
 #include "BattleItem.h"
 #include "CPP_EquipmentBase.h"
 #include "MagicalGem.h"
 
 #include "Inventory.generated.h"
 
+class UCPP_MagicalGem;
 
-
-USTRUCT(BlueprintType, Blueprintable) //‚¨‚Ü‚¶‚È‚¢
+USTRUCT(BlueprintType) //‚¨‚Ü‚¶‚È‚¢
 struct FInventory
 {
 	//‚¨‚Ü‚¶‚È‚¢2

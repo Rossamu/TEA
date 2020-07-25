@@ -5,6 +5,7 @@
 
 #include "MagicalGem.generated.h"
 
+
 //十字キー割り当て用
 /*UENUM(BlueprintType)
 enum class ED-Pad : unsigned int8
@@ -15,6 +16,8 @@ enum class ED-Pad : unsigned int8
 	MT_Left			UMETA(DisplayName = "D-Pad_Left"),
 	Num				UMETA(Hidden)
 };*/
+
+class ACPP_PlayerCharacter;
 
 UCLASS(BlueprintType, Blueprintable, Abstract)
 class TEA_API UCPP_MagicalGem : public UCPP_ItemBase
@@ -31,7 +34,7 @@ public:
 		int32 RemainedMagic;
 
 	//A reference for player class. Used to decide where the magic is spawned. プレイヤークラス参照。座標の取得とかに使う。
-	UPROPERTY(EditAnywhere, Meta = (ExposeOnSpawn = true), BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, Meta = (ExposeOnSpawn = "true"), BlueprintReadWrite)
 		ACPP_PlayerCharacter* PlayerRef;
 
 	//Used to display its shortened name in UIs. 短縮名。UI表示用に使うかも

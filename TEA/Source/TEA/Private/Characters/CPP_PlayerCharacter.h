@@ -1,6 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
+#include "Structs.h"
+#include "Engine.h"
+#include "CoreMinimal.h"
 
 #include "Characters/Base/CPP_CharacterBase.h"
 #include "../../Public/Inventory.h"
@@ -8,6 +11,8 @@
 #include "../../Public/CPP_Sword.h"
 #include "../../Public/CPP_ArtificialLegs.h"
 #include "../../Public/CPP_ArtificialArm.h"
+
+
 
 #include "CPP_PlayerCharacter.generated.h"
 
@@ -27,7 +32,7 @@ struct FEquipments
 {
 	GENERATED_USTRUCT_BODY()
 
-		UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UCPP_Sword* Sword;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -63,11 +68,9 @@ private:
 
 	int32 JumpCount = 0;
 
-protected:
-
-	FInventory Inventory;
-
 public:
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FInventory Inventory;
 
 };
