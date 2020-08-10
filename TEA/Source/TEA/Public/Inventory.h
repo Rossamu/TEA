@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 
 #include "Structs.h"
 #include "Engine.h"
@@ -39,3 +39,4 @@ public:
 	FInventory() {};
 	~FInventory() {};
 };
+*/
