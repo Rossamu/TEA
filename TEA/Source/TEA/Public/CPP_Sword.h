@@ -14,7 +14,9 @@ class TEA_API UCPP_Sword : public UCPP_EquipmentBase
 {
 	GENERATED_BODY()
 public:
-    int AttackPower;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+        int32 AttackPower;
 
     UCPP_Sword();
 };
