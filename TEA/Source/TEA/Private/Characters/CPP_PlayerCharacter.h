@@ -9,8 +9,10 @@
 //#include "../../Public/Inventory.h"
 #include "../../Public/Enum_ActionType.h"
 #include "../../Public/CPP_Sword.h"
-#include "../../Public/CPP_ArtificialLegs.h"
-#include "../../Public/CPP_ArtificialArm.h"
+#include "../../Public/CPP_ArtificialLimbBase.h"
+#include "../../Public/CPP_Costume.h"
+//#include "../../Public/CPP_ArtificialLegs.h"
+//#include "../../Public/CPP_ArtificialArm.h"
 #include "../../Public/BattleItem.h"
 #include "../../Public/CPP_EquipmentBase.h"
 #include "../../Public/MagicalGem.h"
@@ -48,10 +50,16 @@ struct FEquipments
 		UCPP_Sword* Sword;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UCPP_ArtificialLimbBase* ArtificialLimb;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UCPP_Costume* Costume;
+
+	/*UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UCPP_ArtificialArm* ArtificialArm;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		UCPP_ArtificialLegs* ArtificialLegs;
+		UCPP_ArtificialLegs* ArtificialLegs;*/
 
 
 };
