@@ -15,11 +15,15 @@ class TEA_API UCPP_EquipmentBase : public UCPP_ItemBase
 	GENERATED_BODY()
 public:
 
-	//It ecxplains how the item looks like, how useful it is, and so on.
-	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚éà–¾
+	//It shortly ecxplains how the item looks like, how useful it is, and so on.
+	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚é’Z‚¢à–¾
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 		FString Explanation;
 
+	//It ecxplains how the item looks like, how useful it is, and so on in details.
+	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚éÚ‚µ‚¢à–¾
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+		FString Explanation_Full;
 
 	UCPP_EquipmentBase();
 	~UCPP_EquipmentBase();
