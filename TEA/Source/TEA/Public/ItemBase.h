@@ -28,6 +28,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 		FString IconImageName;
 	
+	//It shortly ecxplains how the item looks like, how useful it is, and so on.
+	//"\n" can be used for a line feed. (Becase line feed character is not available in UE4 editor)
+	//見た目や性能に関する短い説明
+	//"\n"を入れることで改行（エディター上で改行文字を入れられないため）
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+		FString Explanation;
+
 
 	//The type "FIcon" will be defined in the future.
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")

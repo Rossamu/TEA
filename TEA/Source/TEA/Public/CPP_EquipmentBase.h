@@ -17,8 +17,8 @@ public:
 
 	//It shortly ecxplains how the item looks like, how useful it is, and so on.
 	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚é’Z‚¢à–¾
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
-		FString Explanation;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+		//FString Explanation;
 
 	//It ecxplains how the item looks like, how useful it is, and so on in details.
 	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚éÚ‚µ‚¢à–¾
