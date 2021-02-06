@@ -1,0 +1,3 @@
+﻿# .cpp, .hファイルはUnicodeで記述される
+[*.{cpp,h}]
+charset = utf-8
