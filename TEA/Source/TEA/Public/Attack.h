@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Engine.h"
 #include "CoreMinimal.h"
@@ -6,7 +6,7 @@
 
 #include "Attack.generated.h"
 
-USTRUCT(BlueprintType, Blueprintable) //‚¨‚Ü‚¶‚È‚¢
+USTRUCT(BlueprintType, Blueprintable) //ãŠã¾ã˜ãªã„
 struct FAttack
 {
 	GENERATED_USTRUCT_BODY()
@@ -19,22 +19,22 @@ public:
 		FString AttackName;
 
 	//A specific combo which triggers this special attack.
-	//‚±‚Ì“ÁêUŒ‚‚ğŒJ‚èo‚·‚½‚ß‚Ì˜AŒg
+	//ã“ã®ç‰¹æ®Šæ”»æ’ƒã‚’ç¹°ã‚Šå‡ºã™ãŸã‚ã®é€£æº
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combo")
 		TArray<EActionType> TriggerCombo;
 
 	//An animation montage which is played when this special attack is used.
-	//‚±‚Ì“ÁêUŒ‚‚ªs‚í‚ê‚½‚Æ‚«‚ÌƒAƒjƒ[ƒVƒ‡ƒ“ƒ‚ƒ“ƒ^[ƒWƒ…
+	//ã“ã®ç‰¹æ®Šæ”»æ’ƒãŒè¡Œã‚ã‚ŒãŸã¨ãã®ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ãƒ¢ãƒ³ã‚¿ãƒ¼ã‚¸ãƒ¥
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combo")
 	UAnimMontage* AnimMontage;
 
 
 
-	//Don't call this.‚±‚ê‚Íg‚í‚È‚¢B
+	//Don't call this.ã“ã‚Œã¯ä½¿ã‚ãªã„ã€‚
 	FAttack() {}
 
 
-	//g‚¢‚½‚©‚Á‚½‚¯‚ÇBP‚Åg‚¦‚È‚¢
+	//ä½¿ã„ãŸã‹ã£ãŸã‘ã©BPã§ä½¿ãˆãªã„
 	FAttack(TArray<EActionType> _TriggerCombo, UAnimMontage* _AnimMontage) {
 		TriggerCombo = _TriggerCombo;
 		AnimMontage = _AnimMontage;

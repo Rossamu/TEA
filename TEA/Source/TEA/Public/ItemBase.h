@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -30,8 +30,8 @@ public:
 	
 	//It shortly ecxplains how the item looks like, how useful it is, and so on.
 	//"\n" can be used for a line feed. (Becase line feed character is not available in UE4 editor)
-	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚é’Z‚¢à–¾
-	//"\n"‚ğ“ü‚ê‚é‚±‚Æ‚Å‰üsiƒGƒfƒBƒ^[ã‚Å‰üs•¶š‚ğ“ü‚ê‚ç‚ê‚È‚¢‚½‚ßj
+	//è¦‹ãŸç›®ã‚„æ€§èƒ½ã«é–¢ã™ã‚‹çŸ­ã„èª¬æ˜
+	//"\n"ã‚’å…¥ã‚Œã‚‹ã“ã¨ã§æ”¹è¡Œï¼ˆã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ä¸Šã§æ”¹è¡Œæ–‡å­—ã‚’å…¥ã‚Œã‚‰ã‚Œãªã„ãŸã‚ï¼‰
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 		FString Explanation;
 

@@ -1,13 +1,13 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Engine.h"
 #include "CoreMinimal.h"
 #include "Status.generated.h"
 
-USTRUCT(BlueprintType, Blueprintable) //‚¨‚Ü‚¶‚È‚¢
+USTRUCT(BlueprintType, Blueprintable) //ãŠã¾ã˜ãªã„
 struct FStatus
 {
-	//‚¨‚Ü‚¶‚È‚¢2
+	//ãŠã¾ã˜ãªã„2
 	GENERATED_USTRUCT_BODY()
 
 public:

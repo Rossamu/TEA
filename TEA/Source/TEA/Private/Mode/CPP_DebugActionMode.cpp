@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "CPP_DebugActionMode.h"
@@ -20,12 +20,12 @@ ACPP_DebugActionMode::ACPP_DebugActionMode()
 void ACPP_DebugActionMode::Initialize()
 {
 
-//	FString path = "/Game/test.test_C"; // /Content ˆÈ‰º‚ÌƒpƒX‚ª /Game ˆÈ‰º‚ÌƒpƒX‚É’u‚«Š·‚í‚èAƒRƒ“ƒeƒ“ƒgƒuƒ‰ƒEƒU[‚Å–¼‘O‚ª test ‚È‚ç test.test_C ‚ğw’è‚·‚éB
-//	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // ã‹L‚Åİ’è‚µ‚½ƒpƒX‚ÉŠY“–‚·‚éƒNƒ‰ƒX‚ğæ“¾
+//	FString path = "/Game/test.test_C"; // /Content ä»¥ä¸‹ã®ãƒ‘ã‚¹ãŒ /Game ä»¥ä¸‹ã®ãƒ‘ã‚¹ã«ç½®ãæ›ã‚ã‚Šã€ã‚³ãƒ³ãƒ†ãƒ³ãƒˆãƒ–ãƒ©ã‚¦ã‚¶ãƒ¼ã§åå‰ãŒ test ãªã‚‰ test.test_C ã‚’æŒ‡å®šã™ã‚‹ã€‚
+//	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // ä¸Šè¨˜ã§è¨­å®šã—ãŸãƒ‘ã‚¹ã«è©²å½“ã™ã‚‹ã‚¯ãƒ©ã‚¹ã‚’å–å¾—
 // if (sc != nullptr)
 	{
-//		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // ƒXƒ|[ƒ“ˆ—
-//		a->SetActorLocation(FVector(600, 1424.302734, 131.790405)); // Šm”F‚µ‚â‚·‚¢‚æ‚¤‚ÉÀ•W‚ğİ’è
+//		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // ã‚¹ãƒãƒ¼ãƒ³å‡¦ç†
+//		a->SetActorLocation(FVector(600, 1424.302734, 131.790405)); // ç¢ºèªã—ã‚„ã™ã„ã‚ˆã†ã«åº§æ¨™ã‚’è¨­å®š
 	}
 	// FGameLogicPlayerParameter = FDebugConfiguration::Instance().Player;
 

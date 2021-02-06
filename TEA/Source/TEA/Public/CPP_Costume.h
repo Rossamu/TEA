@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 
 #include "CoreMinimal.h"
 #include "CPP_EquipmentBase.h"
 #include "CPP_Costume.generated.h"
 
 /*
-«—ˆ“I‚É‚Íˆß‘•ƒf[ƒ^‚Ö‚Ìƒ|ƒCƒ“ƒ^iQÆj‚ğ’Ç‰Á‚·‚é
+å°†æ¥çš„ã«ã¯è¡£è£…ãƒ‡ãƒ¼ã‚¿ã¸ã®ãƒã‚¤ãƒ³ã‚¿ï¼ˆå‚ç…§ï¼‰ã‚’è¿½åŠ ã™ã‚‹
 A pointer (reference) to data of costume will be added.
 */
 UCLASS(BlueprintType, Blueprintable, Abstract)

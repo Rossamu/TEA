@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+Ôªø// Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CPP_GameModeManager.h"
 #include "Kismet/GameplayStatics.h"
@@ -46,7 +46,7 @@ ACPP_GameModeBase* UCPP_GameModeManager::NewMode(UClass * Class, const char * Su
 
 void UCPP_GameModeManager::Initialize(TSubclassOf<ACPP_GameModeBase> ModeClass, const FString & LevelName, const FString &)
 {
-	// Ç±ÇÍÇ¢ÇÈÅH
+	// „Åì„Çå„ÅÑ„ÇãÔºü
 	InitLevelName = LevelName;
 
 	// debug

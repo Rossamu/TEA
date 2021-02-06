@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CPP_StartGameMode.h"
 #include"CPP_DebugActionMode.h"
@@ -37,11 +37,11 @@ void ACPP_StartGameMode::BeginPlay()
 
 	FVector EnemyPosition = FVector(100, 1424.302734, 91.790405);
 
-/*	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // ��L�Őݒ肵���p�X�ɊY������N���X���擾
+/*	TSubclassOf<class AActor> sc = TSoftClassPtr<AActor>(FSoftObjectPath(*EnemyCharacterPath)).LoadSynchronous(); // ・ｽ・ｽL・ｽﾅ設定し・ｽ・ｽ・ｽp・ｽX・ｽﾉ該・ｽ・ｽ・ｽ・ｽ・ｽ・ｽN・ｽ・ｽ・ｽX・ｽ・ｽ・ｽ謫ｾ
 	if (sc)
 	{
-		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // �X�|�[������
-		a->SetActorLocation(EnemyPosition); // �m�F���₷���悤�ɍ��W��ݒ�
+		AActor* a = GetWorld()->SpawnActor<AActor>(sc); // ・ｽX・ｽ|・ｽ[・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ
+		a->SetActorLocation(EnemyPosition); // ・ｽm・ｽF・ｽ・ｽ・ｽ竄ｷ・ｽ・ｽ・ｽ謔､・ｽﾉ搾ｿｽ・ｽW・ｽ・ｽﾝ抵ｿｽ
 	}*/
 
 	UClass* EnemyCharacterBP = LoadObject<UClass>(this, TEXT("Class'/Game/Developers/mio/Contents/MyEnemy/Enemy_Meca.Enemy_Meca_c'"));

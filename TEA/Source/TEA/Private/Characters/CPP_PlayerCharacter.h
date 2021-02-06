@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -19,15 +19,15 @@
 #include "CPP_PlayerCharacter.generated.h"
 
 /*
-‚±‚±‚É‚ ‚é‚¢‚­‚Â‚©‚Ì\‘¢‘Ì‚ÍŠO•”ƒtƒ@ƒCƒ‹‚É‹Lq‚·‚×‚«‚©‚à‚µ‚ê‚È‚¢‚ªA
-ŠO•”‚É‘‚­‚ÆƒCƒ“ƒNƒ‹[ƒh‚ÌƒGƒ‰[iŒ´ˆö–¢“Á’èj‚É‚æ‚èAƒRƒ“ƒpƒCƒ‹‚ª’Ê‚ç‚È‚¢‚½‚ßA—Õ‚Å‚±‚±‚É‹Lq‚·‚é
+ã“ã“ã«ã‚ã‚‹ã„ãã¤ã‹ã®æ§‹é€ ä½“ã¯å¤–éƒ¨ãƒ•ã‚¡ã‚¤ãƒ«ã«è¨˜è¿°ã™ã¹ãã‹ã‚‚ã—ã‚Œãªã„ãŒã€
+å¤–éƒ¨ã«æ›¸ãã¨ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã®ã‚¨ãƒ©ãƒ¼ï¼ˆåŸå› æœªç‰¹å®šï¼‰ã«ã‚ˆã‚Šã€ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ãŒé€šã‚‰ãªã„ãŸã‚ã€è‡¨æ™‚ã§ã“ã“ã«è¨˜è¿°ã™ã‚‹
 */
 
 
 class UCPP_MagicalGem;
 
 
-//ƒXƒeƒbƒv‰ñ”ğ‚Ì‚½‚ß‚É—p‚¢‚éBƒXƒeƒbƒv‚Ì•ûŒü‚ğˆê‹L˜^‚·‚é‚½‚ß‚É‚à‚¿‚¢‚é—ñ‹“Œ^
+//ã‚¹ãƒ†ãƒƒãƒ—å›é¿ã®ãŸã‚ã«ç”¨ã„ã‚‹ã€‚ã‚¹ãƒ†ãƒƒãƒ—ã®æ–¹å‘ã‚’ä¸€æ™‚è¨˜éŒ²ã™ã‚‹ãŸã‚ã«ã‚‚ã¡ã„ã‚‹åˆ—æŒ™å‹
 //Used for step-dodge. This enum type is used to memory stepping direction temporary. 
 UENUM(BlueprintType)
 enum class EStepDirection : uint8
@@ -39,9 +39,9 @@ enum class EStepDirection : uint8
 	None
 };
 
-//Œ»İ‚Ì‘•”õi‘•”õ•i‚ÌƒCƒ“ƒxƒ“ƒgƒŠ‚Å‚Í‚È‚¢jBƒXƒLƒ‹‚â”h¶‹Z‚ª‚±‚±‚ğQÆ‚·‚éB
+//ç¾åœ¨ã®è£…å‚™ï¼ˆè£…å‚™å“ã®ã‚¤ãƒ³ãƒ™ãƒ³ãƒˆãƒªã§ã¯ãªã„ï¼‰ã€‚ã‚¹ã‚­ãƒ«ã‚„æ´¾ç”ŸæŠ€ãŒã“ã“ã‚’å‚ç…§ã™ã‚‹ã€‚
 //Current equipments. It does not mean an inventory of equipments. 
-USTRUCT(BlueprintType, Blueprintable) //‚¨‚Ü‚¶‚È‚¢
+USTRUCT(BlueprintType, Blueprintable) //ãŠã¾ã˜ãªã„
 struct FEquipments
 {
 	GENERATED_USTRUCT_BODY()
@@ -64,11 +64,11 @@ struct FEquipments
 
 };
 
-//‘•”õ‚âg—p‰Â”\‚È–‚–@‚Í‚±‚Ì’†‚©‚çQÆ‚ğ‚·‚éB
-USTRUCT(BlueprintType) //‚¨‚Ü‚¶‚È‚¢
+//è£…å‚™ã‚„ä½¿ç”¨å¯èƒ½ãªé­”æ³•ã¯ã“ã®ä¸­ã‹ã‚‰å‚ç…§ã‚’ã™ã‚‹ã€‚
+USTRUCT(BlueprintType) //ãŠã¾ã˜ãªã„
 struct FInventory
 {
-	//‚¨‚Ü‚¶‚È‚¢2
+	//ãŠã¾ã˜ãªã„2
 	GENERATED_USTRUCT_BODY();
 
 public:

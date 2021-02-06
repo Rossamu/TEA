@@ -1,4 +1,4 @@
-/*#pragma once
+ï»¿/*#pragma once
 
 #include "Structs.h"
 #include "Engine.h"
@@ -12,10 +12,10 @@
 
 class UCPP_MagicalGem;
 
-USTRUCT(BlueprintType) //‚¨‚Ü‚¶‚È‚¢
+USTRUCT(BlueprintType) //ãŠã¾ã˜ãªã„
 struct FInventory
 {
-	//‚¨‚Ü‚¶‚È‚¢2
+	//ãŠã¾ã˜ãªã„2
 	GENERATED_USTRUCT_BODY();
 
 public:

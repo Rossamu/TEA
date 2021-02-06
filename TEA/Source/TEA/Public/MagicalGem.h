@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "CoreMinimal.h"
 #include "ItemBase.h"
 #include "../Private/Characters/CPP_PlayerCharacter.h"
@@ -6,7 +6,7 @@
 #include "MagicalGem.generated.h"
 
 
-//\šƒL[Š„‚è“–‚Ä—p
+//åå­—ã‚­ãƒ¼å‰²ã‚Šå½“ã¦ç”¨
 /*UENUM(BlueprintType)
 enum class ED-Pad : unsigned int8
 {
@@ -29,21 +29,21 @@ public:
 
 	//Variabls
 
-	//The number of remaind magics. –‚–@c‚è‰ñ”
+	//The number of remaind magics. é­”æ³•æ®‹ã‚Šå›æ•°
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ExposeOnSpawn = true), Category = "MagicalGem")
 		int32 RemainedMagic;
 
-	//A reference for player class. Used to decide where the magic is spawned. ƒvƒŒƒCƒ„[ƒNƒ‰ƒXQÆBÀ•W‚Ìæ“¾‚Æ‚©‚Ég‚¤B
+	//A reference for player class. Used to decide where the magic is spawned. ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¯ãƒ©ã‚¹å‚ç…§ã€‚åº§æ¨™ã®å–å¾—ã¨ã‹ã«ä½¿ã†ã€‚
 	UPROPERTY(EditAnywhere, Meta = (ExposeOnSpawn = "true"), BlueprintReadWrite)
 		ACPP_PlayerCharacter* PlayerRef;
 
-	//Used to display its shortened name in UIs. ’Zk–¼BUI•\¦—p‚Ég‚¤‚©‚à
+	//Used to display its shortened name in UIs. çŸ­ç¸®åã€‚UIè¡¨ç¤ºç”¨ã«ä½¿ã†ã‹ã‚‚
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MagicalGem")
 		FString AbbreviatedName;
 	
 	//Functions
 
-	//Execute the magic. Return true when success to do. –‚–@ÀsBÀs‚É¬Œ÷‚·‚ê‚Îtrue
+	//Execute the magic. Return true when success to do. é­”æ³•å®Ÿè¡Œã€‚å®Ÿè¡Œã«æˆåŠŸã™ã‚Œã°true
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "MagicalGem")
 		bool ExecuteMagic() ;
 

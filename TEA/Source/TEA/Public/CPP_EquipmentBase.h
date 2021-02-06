@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 #include "CoreMinimal.h"
@@ -16,12 +16,12 @@ class TEA_API UCPP_EquipmentBase : public UCPP_ItemBase
 public:
 
 	//It shortly ecxplains how the item looks like, how useful it is, and so on.
-	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚é’Z‚¢à–¾
+	//è¦‹ãŸç›®ã‚„æ€§èƒ½ã«é–¢ã™ã‚‹çŸ­ã„èª¬æ˜
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 		//FString Explanation;
 
 	//It ecxplains how the item looks like, how useful it is, and so on in details.
-	//Œ©‚½–Ú‚â«”\‚ÉŠÖ‚·‚éÚ‚µ‚¢à–¾
+	//è¦‹ãŸç›®ã‚„æ€§èƒ½ã«é–¢ã™ã‚‹è©³ã—ã„èª¬æ˜
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 		FString Explanation_Full;
 

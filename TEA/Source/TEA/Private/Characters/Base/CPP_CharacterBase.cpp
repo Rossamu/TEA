@@ -1,5 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-//ƒeƒXƒg
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
+//ãƒ†ã‚¹ãƒˆ
 
 #include "CPP_CharacterBase.h"
 

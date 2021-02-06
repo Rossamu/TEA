@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Engine.h"
 #include "CoreMinimal.h"
@@ -19,8 +19,8 @@ enum class ETargetActor : uint8
 };*/
 
 /*
-í“¬’†‚Ég‚¤“¹‹ï‚Ì’ŠÛƒNƒ‰ƒX
-‰¼‘zŠÖ”‚Æ‚µ‚ÄUseŠÖ”‚ğ‚à‚¿A‚±‚ê‚ğŒÄ‚Ño‚·‚±‚Æ‚ÅƒAƒCƒeƒ€‚ÌŒø‰Ê‚ğ”­¶‚³‚¹‚é‚æ‚¤‚ÉÀ‘•‚·‚éB
+æˆ¦é—˜ä¸­ã«ä½¿ã†é“å…·ã®æŠ½è±¡ã‚¯ãƒ©ã‚¹
+ä»®æƒ³é–¢æ•°ã¨ã—ã¦Useé–¢æ•°ã‚’ã‚‚ã¡ã€ã“ã‚Œã‚’å‘¼ã³å‡ºã™ã“ã¨ã§ã‚¢ã‚¤ãƒ†ãƒ ã®åŠ¹æœã‚’ç™ºç”Ÿã•ã›ã‚‹ã‚ˆã†ã«å®Ÿè£…ã™ã‚‹ã€‚
 */
 UCLASS(BlueprintType, Blueprintable, Abstract) 
 class TEA_API UCPP_BattleItemBase : public UCPP_ItemBase
