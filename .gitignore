@@ -89,3 +89,4 @@ TEA/Intermediate/Build/**
 TEA/Intermediate/AssetRegistryCache/**
 TEA/Intermediate/ProjectFiles/*.*
 !TEA/Intermediate/ProjectFiles/.editorconfig
+
