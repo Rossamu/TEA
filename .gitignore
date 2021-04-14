@@ -90,3 +90,8 @@ TEA/Intermediate/AssetRegistryCache/**
 TEA/Intermediate/ProjectFiles/*.*
 !TEA/Intermediate/ProjectFiles/.editorconfig
 
+# Rider for UE4用
+TEA/.idea/*
+
+
+
