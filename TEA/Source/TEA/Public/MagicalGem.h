@@ -27,7 +27,7 @@ class TEA_API UCPP_MagicalGem : public UCPP_ItemBase
 
 public:
 
-	//Variabls
+	//Variables
 
 	//The number of remaind magics. 魔法残り回数
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ExposeOnSpawn = true), Category = "MagicalGem")
@@ -40,6 +40,14 @@ public:
 	//Used to display its shortened name in UIs. 短縮名。UI表示用に使うかも
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MagicalGem")
 		FString AbbreviatedName;
+
+	//アイコン（小）用画像
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MagicalGem")
+		UTexture2D* SmallIcon;
+
+	//詳細画面で見せる、大きい画像
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MagicalGem")
+		UTexture2D* LargeIcon;
 	
 	//Functions
 
