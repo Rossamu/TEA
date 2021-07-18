@@ -14,15 +14,19 @@ class TEA_API UCPP_ItemBase : public UObject
 {
 	GENERATED_BODY()
 
+
+
+
 public:
 
-	//const
+	//定数
 
 	UPROPERTY(BlueprintReadOnly, Category = "Item")
 		FString PathToIconFilesDirectory;
 
-	//Variabls
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
+	
+	//変数
+	UPROPERTY(EditAnywhere, BlueprintReadonly, Category = "Item")
 		FString Name;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
@@ -36,14 +40,27 @@ public:
 		FString Explanation;
 
 
-	//The type "FIcon" will be defined in the future.
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
-		//FIcon Icon;
+	//アイコン（小）用の画像.
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, BlueprintGetter=GetSmallIcon, Category = "Item")
+	UTexture2D* SmallIcon;
+
+	//アイコン（大）用の画像
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, BlueprintGetter=GetLargeIcon,  Category = "Item")
+	UTexture2D* LargeIcon;
 
 
 	//Functions
 	UCPP_ItemBase() {
-		PathToIconFilesDirectory = "/Game/Developers/KoichiYatsuduka/Items/Icons/";
+		//PathToIconFilesDirectory = "/Game/Developers/KoichiYatsuduka/Items/Icons/";
 	};
 	~UCPP_ItemBase() {};
+
+	//アイコンの受け渡し方が定まっていないため、関数による取得をする
+	UFUNCTION(BlueprintPure, Category="Item")
+		UTexture2D* GetSmallIcon() const;
+
+	//アイコンの受け渡し方が定まっていないため、関数による取得をする
+	UFUNCTION(BlueprintPure, Category="Item")
+        UTexture2D* GetLargeIcon() const;
+	
 };
