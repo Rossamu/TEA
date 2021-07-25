@@ -106,7 +106,9 @@ private:
 
 	static const int32 MaxJumpCount = 2;
 
-	
+	// ショートカットアイテム
+	static const int32 MaxItemShortcutCount = 10;
+	TArray<TMap<UCPP_BattleItemBase*, int32>> ItemShortcut;
 
 	// Called to bind functionality to input
 	virtual void  SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
@@ -117,6 +119,9 @@ private:
 	void Jump();
 
 	int32 JumpCount = 0;
+
+	// Use Item Method
+	void UseItem();
 
 public:
 

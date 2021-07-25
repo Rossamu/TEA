@@ -13,6 +13,24 @@ void ACPP_PlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// ショートカットのアイテム追加
+	// BattleItemsの中から10種類のアイテムを初期装備
+	for (const auto& Elem : Inventory.BattleItems)
+	{
+		if (ItemShortcut.Num() < MaxItemShortcutCount)
+		{
+			TMap<UCPP_BattleItemBase*, int32> item;
+			item.Add(Elem.Key, Elem.Value);
+			ItemShortcut.Add(item);
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	// UseItemをBind
+	InputComponent->BindAction("UseItem", IE_Pressed, this, &ACPP_PlayerCharacter::UseItem);
 }
 
 void ACPP_PlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -53,7 +71,10 @@ void ACPP_PlayerCharacter::Jump()
 	}
 }
 
+void ACPP_PlayerCharacter::UseItem()
+{
 
+}
 
 //void ACPP_PlayerCharacter::StopJumping()
 //{
