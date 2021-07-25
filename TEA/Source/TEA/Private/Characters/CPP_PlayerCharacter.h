@@ -123,4 +123,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FInventory Inventory;
 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 };

@@ -9,6 +9,12 @@
 #include "Engine/World.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
+void ACPP_PlayerCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+}
+
 void ACPP_PlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
