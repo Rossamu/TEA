@@ -41,13 +41,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MagicalGem")
 		FString AbbreviatedName;
 
-	//アイコン（小）用画像
+	/*//アイコン（小）用画像
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MagicalGem")
 		UTexture2D* SmallIcon;
 
 	//詳細画面で見せる、大きい画像
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MagicalGem")
-		UTexture2D* LargeIcon;
+		UTexture2D* LargeIcon;*/
 	
 	//Functions
 
