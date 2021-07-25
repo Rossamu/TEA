@@ -21,7 +21,7 @@ void ACPP_PlayerCharacter::BeginPlay()
 	{
 		if (ShortcutItem.Num() < MaxItemShortcutCount)
 		{
-			ShortcutItem.Add(Elem.Key, Elem.Value);
+			ShortcutItem.Add(Elem.Key);
 		}
 		else
 		{

@@ -137,7 +137,7 @@ public:
 
 	// ショートカットアイテム
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		TMap<UCPP_BattleItemBase*, int32> ShortcutItem;
+		TArray<UCPP_BattleItemBase*> ShortcutItem;
 
 protected:
 	// Called when the game starts or when spawned
