@@ -93,7 +93,6 @@ public:
 	~FInventory() {};
 };
 
-
 /**
  * 
  */
@@ -108,6 +107,15 @@ private:
 
 	// ショートカットアイテム
 	static const int32 MaxItemShortcutCount = 10;
+
+	// コンボ関連
+	bool IsChainingCombo = false;
+	bool CanCancel = false;
+	float Pre_CancelAcceptance_sec = 0.0f;
+	EActionType Preinput;
+
+	void Attack();
+	void NormaAttack();
 
 	// Called to bind functionality to input
 	virtual void  SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
@@ -127,6 +135,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FInventory Inventory;
 
+	// ショートカットアイテム
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TMap<UCPP_BattleItemBase*, int32> ShortcutItem;
 

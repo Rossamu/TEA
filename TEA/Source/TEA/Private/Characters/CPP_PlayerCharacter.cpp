@@ -9,6 +9,8 @@
 #include "Engine/World.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
+static const float CancelAcceptanceLength_sec = 0.5f;
+
 void ACPP_PlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -78,3 +80,26 @@ void ACPP_PlayerCharacter::UseItem()
 //{
 	
 //}
+
+void ACPP_PlayerCharacter::Attack()
+{
+	if (IsChainingCombo)
+	{
+		if (CanCancel)
+		{
+			// ノーマルアタック実行
+			NormaAttack();
+		}
+		else
+		{
+			Preinput = EActionType::NormalAttack;
+			Pre_CancelAcceptance_sec = CancelAcceptanceLength_sec;
+		}
+	}
+
+}
+
+void ACPP_PlayerCharacter::NormaAttack()
+{
+
+}
