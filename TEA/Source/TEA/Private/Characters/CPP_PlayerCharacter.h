@@ -108,7 +108,6 @@ private:
 
 	// ショートカットアイテム
 	static const int32 MaxItemShortcutCount = 10;
-	TArray<TMap<UCPP_BattleItemBase*, int32>> ItemShortcut;
 
 	// Called to bind functionality to input
 	virtual void  SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
@@ -127,6 +126,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FInventory Inventory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TMap<UCPP_BattleItemBase*, int32> ShortcutItem;
 
 protected:
 	// Called when the game starts or when spawned

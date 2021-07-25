@@ -17,11 +17,9 @@ void ACPP_PlayerCharacter::BeginPlay()
 	// BattleItemsの中から10種類のアイテムを初期装備
 	for (const auto& Elem : Inventory.BattleItems)
 	{
-		if (ItemShortcut.Num() < MaxItemShortcutCount)
+		if (ShortcutItem.Num() < MaxItemShortcutCount)
 		{
-			TMap<UCPP_BattleItemBase*, int32> item;
-			item.Add(Elem.Key, Elem.Value);
-			ItemShortcut.Add(item);
+			ShortcutItem.Add(Elem.Key, Elem.Value);
 		}
 		else
 		{
