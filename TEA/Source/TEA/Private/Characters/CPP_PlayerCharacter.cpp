@@ -88,7 +88,11 @@ void ACPP_PlayerCharacter::Attack()
 		if (CanCancel)
 		{
 			// ノーマルアタック実行
-			NormaAttack();
+			if (NormaAttack())
+			{
+				IsChainingCombo = true;
+				CanCancel = false;
+			}
 		}
 		else
 		{
@@ -96,10 +100,113 @@ void ACPP_PlayerCharacter::Attack()
 			Pre_CancelAcceptance_sec = CancelAcceptanceLength_sec;
 		}
 	}
-
+	else
+	{
+		// ノーマルアタック実行
+		if (NormaAttack())
+		{
+			IsChainingCombo = true;
+			CanCancel = false;
+		}
+	}
 }
 
-void ACPP_PlayerCharacter::NormaAttack()
+bool ACPP_PlayerCharacter::NormaAttack()
 {
+	for(const auto & Elem : Chain)
+	{
+		if ((Elem == EActionType::NormalAttack) || (Elem == EActionType::SpecialAttack))
+		{
+			Tmp_chain.Add(Elem);
+		}
+	}
 
+	// ActiveAttackのAttackNameをチェック
+	if (GetAvailableAttack().AttackName != "Noneb")
+	{
+		// PlayAnimMontage実行
+		PlayAnimMontage(Tmp_AttackElement.AnimMontage);
+		
+		// NormalAttackをチェーンに追加
+		Chain.Add(EActionType::NormalAttack);
+		
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+// 先行入力をしていて、尚且つキャンセル可能タイミングになった時に自動的に発火
+void ACPP_PlayerCharacter::Precancel_attack()
+{
+	Pre_CancelAcceptance_sec = 0.0f;
+
+	// ノーマルアタック実行
+	if (NormaAttack())
+	{
+		IsChainingCombo = true;
+		CanCancel = false;
+	}
+}
+
+FAttack ACPP_PlayerCharacter::GetAvailableAttack()
+{
+	for (const auto& Elem : Chain)
+	{
+		if ((Elem == EActionType::NormalAttack) || (Elem == EActionType::SpecialAttack))
+		{
+			Tmp_chain.Add(Elem);
+		}
+	}
+
+	for (const auto& Elem : AvailableAttackList)
+	{
+		Tmp_AttackElement = Elem;
+
+		// AvailableAttackListのTriggerComboとTmp_chainを比較
+		if (CompareAnyActionType(Tmp_chain, Elem.TriggerCombo))
+		{
+			return Tmp_AttackElement;
+		}
+	}
+
+	if (IsValid(Equipments.ArtificialLimb))
+	{
+		ArtLimb = Equipments.ArtificialLimb;
+
+		// AvailableAttackListのTriggerComboとArtLimb SpecificSpecialAttack.TriggerComboを比較
+		if (CompareAnyActionType(Tmp_chain, ArtLimb->SpecificSpecialAttack.TriggerCombo))
+		{
+			return ArtLimb->SpecificSpecialAttack;
+		}
+		else
+		{ 
+			// Make Attack(新しいAttackを生成してreturn)
+			FAttack NewAttack;
+			return NewAttack;
+		}
+	}
+	
+}
+
+bool ACPP_PlayerCharacter::CompareAnyActionType(TArray<EActionType> a, TArray<EActionType> b)
+{
+	if (a.Num() == b.Num())
+	{
+		for (int32 index = 0; index < a.Num(); index++)
+		{
+			if (a[index] != b[index])
+			{
+				return false;
+			}
+		}
+
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

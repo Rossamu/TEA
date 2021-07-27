@@ -113,9 +113,15 @@ private:
 	bool CanCancel = false;
 	float Pre_CancelAcceptance_sec = 0.0f;
 	EActionType Preinput;
+	TArray<EActionType> Tmp_chain;
+	FAttack Tmp_AttackElement;
+	UCPP_ArtificialLimbBase* ArtLimb;
 
 	void Attack();
-	void NormaAttack();
+	bool NormaAttack();
+	void Precancel_attack();
+	FAttack GetAvailableAttack();
+	bool CompareAnyActionType(TArray<EActionType> a, TArray<EActionType> b);
 
 	// Called to bind functionality to input
 	virtual void  SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
@@ -138,6 +144,16 @@ public:
 	// ショートカットアイテム
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TArray<UCPP_BattleItemBase*> ShortcutItem;
+
+	// Normal Attackで利用するコンボチェーン
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<EActionType> Chain;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FEquipments Equipments;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<FAttack> AvailableAttackList;
 
 protected:
 	// Called when the game starts or when spawned
