@@ -181,14 +181,11 @@ FAttack ACPP_PlayerCharacter::GetAvailableAttack()
 		{
 			return ArtLimb->SpecificSpecialAttack;
 		}
-		else
-		{ 
-			// Make Attack(新しいAttackを生成してreturn)
-			FAttack NewAttack;
-			return NewAttack;
-		}
 	}
-	
+
+	// Make Attack(新しいAttackを生成してreturn)
+	FAttack NewAttack;
+	return NewAttack;
 }
 
 bool ACPP_PlayerCharacter::CompareAnyActionType(TArray<EActionType> a, TArray<EActionType> b)
@@ -209,4 +206,52 @@ bool ACPP_PlayerCharacter::CompareAnyActionType(TArray<EActionType> a, TArray<EA
 	{
 		return false;
 	}
+}
+
+void ACPP_PlayerCharacter::Smash()
+{
+	if (IsChainingCombo)
+	{
+		if (CanCancel)
+		{
+			// スペシャルアタック実行
+			if (SpecialAttack())
+			{
+				IsChainingCombo = true;
+				CanCancel = false;
+			}
+		}
+		else
+		{
+			Preinput = EActionType::SpecialAttack;
+			Pre_CancelAcceptance_sec = CancelAcceptanceLength_sec;
+		}
+	}
+	else
+	{
+		// スペシャルアタック実行
+		if (SpecialAttack())
+		{
+			IsChainingCombo = true;
+			CanCancel = false;
+		}
+	}
+}
+
+void ACPP_PlayerCharacter::Precancel_Smash()
+{
+	Pre_CancelAcceptance_sec = 0.0f;
+
+	// スペシャルアタック実行
+	if (SpecialAttack())
+	{
+		IsChainingCombo = true;
+		CanCancel = false;
+	}
+}
+
+bool ACPP_PlayerCharacter::SpecialAttack()
+{
+
+	return true;
 }

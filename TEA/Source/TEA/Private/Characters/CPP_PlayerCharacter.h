@@ -117,11 +117,17 @@ private:
 	FAttack Tmp_AttackElement;
 	UCPP_ArtificialLimbBase* ArtLimb;
 
+	// Attack関連関数
 	void Attack();
 	bool NormaAttack();
 	void Precancel_attack();
 	FAttack GetAvailableAttack();
 	bool CompareAnyActionType(TArray<EActionType> a, TArray<EActionType> b);
+
+	// Smash関連関数
+	void Smash();
+	void Precancel_Smash();
+	bool SpecialAttack();
 
 	// Called to bind functionality to input
 	virtual void  SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
