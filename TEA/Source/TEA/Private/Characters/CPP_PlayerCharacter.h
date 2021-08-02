@@ -116,6 +116,8 @@ private:
 	TArray<EActionType> Tmp_chain;
 	FAttack Tmp_AttackElement;
 	UCPP_ArtificialLimbBase* ArtLimb;
+	bool IsRolling = false;
+	bool IsStepping = false;
 
 	// Attack関連関数
 	void Attack();
@@ -128,6 +130,9 @@ private:
 	void Smash();
 	void Precancel_Smash();
 	bool SpecialAttack();
+
+	// ResetCombo
+	void ResetCombo();
 
 	// Called to bind functionality to input
 	virtual void  SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;

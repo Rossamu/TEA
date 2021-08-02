@@ -122,7 +122,7 @@ bool ACPP_PlayerCharacter::NormaAttack()
 	}
 
 	// ActiveAttackのAttackNameをチェック
-	if (GetAvailableAttack().AttackName != "Noneb")
+	if (GetAvailableAttack().AttackName != "None")
 	{
 		// PlayAnimMontage実行
 		PlayAnimMontage(Tmp_AttackElement.AnimMontage);
@@ -252,6 +252,38 @@ void ACPP_PlayerCharacter::Precancel_Smash()
 
 bool ACPP_PlayerCharacter::SpecialAttack()
 {
+	for (const auto& Elem : Chain)
+	{
+		if ((Elem == EActionType::NormalAttack) || (Elem == EActionType::SpecialAttack))
+		{
+			Tmp_chain.Add(Elem);
+		}
+	}
 
-	return true;
+	// ActiveAttackのAttackNameをチェック
+	if (GetAvailableAttack().AttackName != "None")
+	{
+		// PlayAnimMontage実行
+		PlayAnimMontage(Tmp_AttackElement.AnimMontage);
+
+		// SpecialAttackをチェーンに追加
+		Chain.Add(EActionType::SpecialAttack);
+
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+
+void ACPP_PlayerCharacter::ResetCombo()
+{
+	Chain;
+
+	IsChainingCombo = false;
+	CanCancel = false;
+	IsRolling = false;
+	IsStepping = false;
 }
